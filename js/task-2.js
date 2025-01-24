@@ -1,5 +1,10 @@
-function makeTransaction(quantity, pricePerDroid) {
-    let totalPrice = parseInt(quantity) * parseInt(pricePerDroid);
-    let message = `You ordered  ${quantity} droids worth ${totalPrice} credits!`;
+function getShippingMessage(country, price, deliveryFee) {
+
+    let totalPrice = parseInt(price) + parseInt(deliveryFee);
+
+    country = String(country);
+
+    let message = `Shipping to ${country} will cost ${totalPrice} credits`;
+    
     return message;
 }
